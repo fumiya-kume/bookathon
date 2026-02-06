@@ -27,7 +27,7 @@ on:
 # Steps represent a sequence of tasks that will be executed as part of the job
 #    steps:
 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#      - uses: actions/checkout@v3
+#      - uses: actions/checkout@v4
 # Runs a single command using the runners shell
 #      - name: Run a one-line script
 #        run: echo Hello, world!
@@ -50,10 +50,10 @@ jobs:
     container: docker://vvakame/review:5.5
     needs: Setup
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build PDF
         run: rake pdf
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: pdf
           path: book.pdf
@@ -66,10 +66,10 @@ jobs:
     container: docker://vvakame/review:5.5
     needs: Setup
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build ePub
         run: rake epub
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: epub
           path: book.epub
