@@ -31,7 +31,7 @@ AIが生成する文章と、人間の生の声から生まれる文章。その
 ===[notoc] 著者紹介
 
  : Kuu
-Software Engineer @Mercari。AI活用コンサルティング・受託開発 @Kuu Systems。趣味は海外旅行とVibe Coding。ハッカソンでは「AIをガードレールで囲んで暴れさせる」スタイルで、非同期Coding Agentの並列運用やmaster直push戦略など、速度を最大化する開発手法を追求している。
+久米郁弥。メルカリでAndroidアプリエンジニアとして10M+ダウンロードのC2Cアプリ開発に従事。社外ではAI活用コンサルティング・受託開発を行うKuu Systemsを運営。約1万人規模のAIコミュニティAIAU（AI Agent User Group）の運営や、6,000人超が参加したCursor Meetup Tokyoの主催など、AIツール普及の最前線で活動する。OSS「ai-in-japan」（GitHub 280+ stars）ではAI開発ツール導入企業をまとめ、Developers Summit 2025/2026やKotlinFest 2022にも登壇。趣味は海外旅行とVibe Coding。ハッカソンでは「AIをガードレールで囲んで暴れさせる」スタイルで、非同期Coding Agentの並列運用やmaster直push戦略など、速度を最大化する開発手法を追求している。
 
  : Sae
 塗木冴。東京工業大学情報工学科卒。ソフトバンクでAIサービス開発、楽天で動画ストリーミング、VIE STYLEでニューロテックを経て、現在はメルカリでiOS開発に従事。東京拠点の国際ハッカソンコミュニティMeltingHackの創設者として、Apple Vision Proハッカソンやゲームジャムなど多数のイベントを主催。自身もJunction 2023（ヘルシンキ）でOutokumpu Challenge 1位を獲得するなど、主催者と参加者の両面でハッカソンを愛する。
