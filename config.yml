@@ -27,7 +27,7 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  AI時代のハッカソン
+  AI Native ハッカソン徹底攻略
 subtitle: |-
   3人のエンジニアが語る、AIと共創するものづくりの実践知
 
@@ -37,7 +37,7 @@ subtitle: |-
 
 # 著者名。「, 」で区切って複数指定できる
 # 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
-aut: ["Kuu", "Remio"]
+aut: ["Kuu", "Sae", "Lemio"]
 
 
 # (Starter拡張) 奥付に載せるデータ。現在はPDFのみ対応。
