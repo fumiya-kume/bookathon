@@ -10,13 +10,14 @@ PREDEF:
 
 ## 本文
 CHAPS:
- - sample.re
+ - 01-ai-native-mindset.re
+ - 02-idea-and-expression.re
+ - 03-hackathon-operations.re
+ - 04-ai-tips-in-practice.re
 
 ## 付録
 APPENDIX:
-# - 91-compare.re
-# - 92-filelist.re
-# - 93-background.re
+ - 91-hackathon-checklist.re
 
 ## あとがき
 POSTDEF:
