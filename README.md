@@ -1,88 +1,61 @@
-# メンテナンス終了
+## このリポジトリで「本を書く」場所と流れ
 
-現在は以下のプロジェクトに移行しており、私はRe:Viewを使用しておりません。
+このリポジトリは **Re:VIEW（`.re`）** で原稿を書き、PDF/EPUB/HTML を生成する構成です。
 
-- [TexLive Actions](https://github.com/kaitas/texlive-actions)
-- [GitHub Actionsでpandocのコンテナを使ってmarkdownをepubやPDFにする](https://note.com/o_ob/n/ncaa63ef6b448)
+- **原稿を書く場所**: `contents/` 配下の `*.re`
+- **章の順番を決める場所**: `catalog.yml`
+- **書名/著者/表紙/出力設定など**: `config.yml`
+- **画像を置く場所**: `images/`
 
-新しい記事やリポジトリにスターをつけていただけたらモチベが上がります！
+### まず何を編集すればいい？
 
-# ReBook
-Re:VIEW で本や卒論を書いてGitHub ActionsでPDFやePubを生成するテンプレート「[ReBook](https://github.com/kaitas/ReBook/)」です。
+- **まずは** `contents/sample.re` を開いて、本文を差し替えるのが最短です。
+- **まえがき/あとがき**は `contents/00-preface.re` と `contents/99-postface.re` にあります。
 
-- この[リンク](https://github.com/kaitas/ReBook/generate) から、お使いの GitHub アカウントで無料で利用できます。
-- リポジトリは[こちら](https://github.com/kaitas/ReBook/)です
+### 章（ファイル）を追加する手順
 
-これで電車の中でも原稿が書けます！
-たとえばスマホで Git が使えるツール、iPhone/iPad だと [Working Copy](https://apps.apple.com/jp/app/working-copy-git-client/id896694807) や、本家GitHubクライアントなどが使えます。
+1. `contents/` に `01-intro.re` のような新しい `.re` を作る（ファイル名は自由）
+2. `catalog.yml` の `CHAPS:` にそのファイル名を追加する
+   - **注意**: `catalog.yml` は **タブ文字禁止**（エラーになります）
 
-なお拙著「[AIとコラボして神絵師になる 論文で読み解くStable Diffusion](https://ivtv.page.link/ap)」（Stable Diffusionの公開から2ヵ月で出版）は Re:VIEWを使って執筆しました。
+### 画像の入れ方（例）
 
-## コンセプト
+- 画像ファイルを `images/` に置く（例: `images/my-figure.png`）
+- 原稿で `//image[my-figure][キャプション]` のように参照します
+  - 例は `contents/sample.re` にあります（`DHP-Metaverse.png` の参照）
 
-- 完璧に無料で使える ePub ＆ PDF 生成
-- 卒論や技術書典などの技術同人誌に使える
-- rubyをインストールしない
-- Re:ViewもTeXもインストールしない
-- GitHub の Issue や Project を使って校正したり複数人でコラボレーションできる
-- GitHub Pages をつかって執筆内容の Webサイト を同時生成する
-- GitHub および Actions だけで完結する
-- できるだけ覚えることを少なくする（書くことに集中したいから）
+### ビルド（PDF/EPUB/HTML）
 
-## 使い方
+このプロジェクトには `Rakefile` があり、Re:VIEW コマンドを呼び出します。
+ローカルに Ruby/Re:VIEW を入れずに試したい場合は **Docker** で完結できます。
 
-1. このプロジェクトをクローン、もしくはテンプレートとして新規作成。
-2. あとは `contents`フォルダにある `sample.re` ファイルを書き換えて
-3. git pushして
-4. Actionsから眺めていれば、ArtifactsにZIP圧縮された PDF や ePub ファイルが生成されます。
-5. 章やファイルを増やしたいときは `catalog.yml` を見ましょう
-6. Re:VIEWの書式がわからないときは[調べましょう](https://github.com/kmuto/review/blob/master/doc/format.ja.md)
+```bash
+docker run --rm -v "$PWD:/work" -w /work vvakame/review:5.5 rake pdf
+docker run --rm -v "$PWD:/work" -w /work vvakame/review:5.5 rake epub
+docker run --rm -v "$PWD:/work" -w /work vvakame/review:5.5 rake web
+```
 
-## 注意事項
+生成物:
+- `book.pdf`
+- `book.epub`
+- `webroot/`（HTML一式）
 
-### Webサイトの生成が不要な時は
+### Re:VIEWの書式リファレンス
 
-Jekyllを使ってWebサイトを自動生成して公開します。GitHub PagesによるHTML版の書籍も同時公開できますが、書籍によっては即時公開を望まない場合もあると思います。
-GitHub PagesによるWebサイト生成が不要な場合は
+- `https://github.com/kmuto/review/blob/master/doc/format.ja.md`
 
-- `.github/workflows/jekyll-gh-pages.yml` を削除してください
+### もう少し丁寧なガイド
 
-### 細かいことをしたいときは…
+- `WRITING_GUIDE.md` を参照してください（章の増やし方、運用のコツ、よくあるミスをまとめています）
 
-多くは `config.yml` で指定されているファイルです。
+---
 
-デフォルトは B5 の書籍に設定してありますが、細かい指定も `config.yml` で行います。
+## 補足（出典/派生テンプレについて）
 
-- coverimage: cover-a5.ai (表紙画像ファイル) `/images/DHP-Metaverse.ai` というファイルになっています。Adobe Illustratorで作成してください（PDF互換形式）。
+この構成は Re:VIEW による執筆テンプレート（通称 ReBook 系）をベースにしています。
+（関連リンクは履歴として残しています）
 
-どうしても入手方法や修正方法がわからない場合は、[Re:VIEW Starter](https://kauplan.org/reviewstarter/) で、新規電子書籍プロジェクトを作成してみるとよいと思います。
-
-
-
-## 参考資料
-
-Re:VIEWを始めやすくするためのスタートラインとしては、kauplanさんの [Re:VIEW Starter](https://kauplan.org/reviewstarter/) を参考にしています。
-
-- https://kauplan.org/reviewstarter/
-- https://qiita.com/kauplan/items/d01e6e39a05be0b908a1
-
-ただし、Re:VIEW Starter では `Re:VIEW 3.0 や 4.0 はサポートしていません` と明言されていますので、本プロジェクトでは最新の Re:VIEW 5.5 を使って GitHub Actions でビルドするようにしています。
-vvakameさんありがとうございます。
-
-- docker://vvakame/review:5.5
-
-また、GitHub Actions で以下のモジュールを使っています。
-
-- actions/checkout@v3
-- actions/upload-artifact@v3
-
-この場をお借りして感謝の意を述べさせていただきます。
-
-テンプレートとして公開しますが、フォークやプルリクエストなど歓迎です。
-
-Happy authoring life!
-
- - 白井暁彦 [@o_ob](https://twitter.com/o_ob) [akihiko.shirai.as](https://akihiko.shirai.as/)
+- `https://github.com/kaitas/ReBook/`
 
 
 
