@@ -57,3 +57,7 @@ build-iPhoneSimulator/
 
 # Claude Code local settings (contains machine-specific paths)
 .claude/settings.local.json
+
+# Generated book files
+book.pdf
+book.epub
