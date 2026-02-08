@@ -6,9 +6,9 @@
       .label-text {
         font-family: 'Times New Roman', 'Noto Serif JP', Georgia, serif;
         font-style: italic;
-        font-size: 4.2;
+        font-size: 4.2mm;
         fill: #555555;
-        letter-spacing: 0.5;
+        letter-spacing: 0.5mm;
       }
       .title-main {
         font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
@@ -18,13 +18,13 @@
       .subtitle-text {
         font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
         font-weight: 400;
-        font-size: 4.6;
+        font-size: 4.6mm;
         fill: #333333;
       }
       .author-text {
         font-family: 'Noto Sans JP', 'Helvetica Neue', '游ゴシック', sans-serif;
         font-weight: 300;
-        font-size: 5;
+        font-size: 5mm;
         fill: #000000;
       }
     </style>
@@ -53,10 +53,10 @@
   <!-- ======== 20-40%: タイトル + サブタイトル (y: 51-103) ======== -->
 
   <!-- タイトル: AIネイティブ時代の（9mm） -->
-  <text x="20" y="58" class="title-main" font-size="9">AIネイティブ時代の</text>
+  <text x="20" y="58" class="title-main" font-size="9mm">AIネイティブ時代の</text>
 
   <!-- タイトル: ハッカソン戦略（12、より大きく） -->
-  <text x="20" y="74" class="title-main" font-size="12">ハッカソン戦略</text>
+  <text x="20" y="74" class="title-main" font-size="12mm">ハッカソン戦略</text>
 
   <!-- タイトルとサブタイトルの区切り線 -->
   <line x1="20" y1="78" x2="80" y2="78" stroke="#0066FF" stroke-width="0.5"/>
