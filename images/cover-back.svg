@@ -44,7 +44,7 @@
   <!-- 書籍紹介文 -->
   <text x="20" y="58" class="desc-text">ハッカソンに出たことはあるだろうか。</text>
   <text x="20" y="66" class="desc-text">AI時代に突入した今、ハッカソンの景色は一変した。</text>
-  <text x="20" y="78" class="desc-text">3人のエンジニアが対話を通じて語る、</text>
+  <text x="20" y="78" class="desc-text">3人のクリエイターが対話を通じて語る、</text>
   <text x="20" y="86" class="desc-text">AIネイティブ時代のマインドセット、</text>
   <text x="20" y="94" class="desc-text">アイデアの生み出し方、運営ノウハウ、</text>
   <text x="20" y="102" class="desc-text">そして実践テクニック。</text>

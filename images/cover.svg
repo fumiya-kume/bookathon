@@ -62,7 +62,7 @@
   <line x1="20" y1="78" x2="80" y2="78" stroke="#0066FF" stroke-width="0.5"/>
 
   <!-- サブタイトル -->
-  <text x="20" y="88" class="subtitle-text">3人のエンジニアが語る、</text>
+  <text x="20" y="88" class="subtitle-text">3人のクリエイターが語る、</text>
   <text x="20" y="95" class="subtitle-text">AIと共創するものづくりの実践知</text>
 
   <!-- ======== 40-80%: タコイラスト (y: 103-205) ======== -->
