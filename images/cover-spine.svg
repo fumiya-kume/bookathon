@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10mm" height="257mm" viewBox="0 0 10 257">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&amp;family=Noto+Sans+JP:wght@300&amp;display=swap');
+
+      .spine-title {
+        font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+        font-weight: 700;
+        font-size: 3.8mm;
+        fill: #FFFFFF;
+      }
+      .spine-author {
+        font-family: 'Noto Sans JP', 'Helvetica Neue', '游ゴシック', sans-serif;
+        font-weight: 300;
+        font-size: 2.5mm;
+        fill: #FFFFFF;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- 背景: ネオンブルー -->
+  <rect width="10" height="257" fill="#0066FF"/>
+
+  <!-- タイトル: 縦書き（writing-mode） -->
+  <text x="6.2" y="18" class="spine-title" writing-mode="tb" glyph-orientation-vertical="0">AIネイティブ時代のハッカソン戦略</text>
+
+  <!-- 著者名（下部、横書き） -->
+  <text x="5" y="243" class="spine-author">Kuu</text>
+  <text x="5" y="247" class="spine-author">Lemio</text>
+  <text x="5" y="251" class="spine-author">Sae</text>
+</svg>

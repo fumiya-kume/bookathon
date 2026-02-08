@@ -27,29 +27,29 @@
         font-size: 3.9mm;
         fill: #000000;
       }
-      .placeholder-text {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        font-size: 4mm;
-        fill: #999999;
-        text-anchor: middle;
-      }
-      .placeholder-sub {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        font-size: 3mm;
-        fill: #bbbbbb;
-        text-anchor: middle;
-      }
+      /* placeholder classes removed — octopus illustration now rendered directly */
     </style>
   </defs>
 
   <!-- 背景: 白 -->
   <rect width="182" height="257" fill="#FFFFFF"/>
 
+  <!-- 外枠: オライリー風の二重罫線 -->
+  <rect x="3" y="3" width="176" height="251" fill="none" stroke="#000000" stroke-width="0.6"/>
+  <rect x="5.5" y="5.5" width="171" height="246" fill="none" stroke="#000000" stroke-width="0.2"/>
+
   <!-- ラベル: Hackathon & AI（上部、左揃え、イタリック） -->
   <text x="20" y="18" class="label-text">Hackathon &amp; AI</text>
 
+  <!-- ラベル下の細い区切り線 -->
+  <line x1="20" y1="22" x2="162" y2="22" stroke="#999999" stroke-width="0.3"/>
+
   <!-- 色帯: ネオンブルー（上部、全幅、高さ12mm） -->
+  <!-- 色帯上部の細いアクセント線 -->
+  <line x1="0" y1="25.5" x2="182" y2="25.5" stroke="#003399" stroke-width="0.4"/>
   <rect x="0" y="26" width="182" height="12" fill="#0066FF"/>
+  <!-- 色帯下部の細いアクセント線 -->
+  <line x1="0" y1="38.5" x2="182" y2="38.5" stroke="#003399" stroke-width="0.4"/>
 
   <!-- タイトル: AIネイティブ時代の（28pt相当 = 9.9mm） -->
   <text x="20" y="55" class="title-main" font-size="9mm">AIネイティブ時代の</text>
@@ -57,39 +57,258 @@
   <!-- タイトル: ハッカソン戦略（36pt相当 = 12.7mm、より大きく） -->
   <text x="20" y="70" class="title-main" font-size="12mm">ハッカソン戦略</text>
 
+  <!-- タイトルとサブタイトルの区切り線 -->
+  <line x1="20" y1="74" x2="80" y2="74" stroke="#0066FF" stroke-width="0.5"/>
+
   <!-- サブタイトル -->
-  <text x="20" y="82" class="subtitle-text">3人のエンジニアが語る、</text>
-  <text x="20" y="89" class="subtitle-text">AIと共創するものづくりの実践知</text>
+  <text x="20" y="83" class="subtitle-text">3人のエンジニアが語る、</text>
+  <text x="20" y="90" class="subtitle-text">AIと共創するものづくりの実践知</text>
 
-  <!-- タコのイラスト プレースホルダー（中央、100mm x 100mm） -->
-  <rect x="41" y="101" width="100" height="100" fill="none" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="3,2" rx="2" ry="2"/>
+  <!-- イラストエリア上部の細い区切り線 -->
+  <line x1="20" y1="97" x2="162" y2="97" stroke="#DDDDDD" stroke-width="0.3"/>
 
-  <!-- プレースホルダー内テキスト -->
-  <text x="91" y="145" class="placeholder-text">Octopus Illustration</text>
-  <text x="91" y="153" class="placeholder-sub">— Engraving Style —</text>
-  <text x="91" y="161" class="placeholder-sub">100mm × 100mm / Monochrome</text>
+  <!-- タコのイラスト — 木版画・銅版画風モノクロ線画（中央、約100mm×100mm） -->
+  <g transform="translate(91, 151)">
 
-  <!-- 小さなタコのシルエットアイコン（プレースホルダーの雰囲気付け） -->
-  <g transform="translate(91, 125)" opacity="0.12">
-    <!-- 頭部（外套膜） -->
-    <ellipse cx="0" cy="-8" rx="8" ry="10" fill="#000000"/>
-    <!-- 目 -->
-    <ellipse cx="-3" cy="-6" rx="1.5" ry="1" fill="#FFFFFF"/>
-    <ellipse cx="3" cy="-6" rx="1.5" ry="1" fill="#FFFFFF"/>
-    <!-- 腕（放射状に8本） -->
-    <path d="M-7,0 Q-14,8 -16,14" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M-5,2 Q-10,12 -12,18" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M-2,3 Q-4,14 -5,20" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M0,4 Q0,15 0,21" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M2,3 Q4,14 5,20" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M5,2 Q10,12 12,18" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M7,0 Q14,8 16,14" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M8,-2 Q16,2 18,6" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- === 外套膜（頭部）=== -->
+    <!-- メイン形状 -->
+    <ellipse cx="0" cy="-30" rx="14" ry="19" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+    <!-- 外套膜の輪郭（やや膨らみのある有機的な形） -->
+    <path d="M-14,-30 C-15,-22 -13,-14 -10,-10 C-7,-7 7,-7 10,-10 C13,-14 15,-22 14,-30"
+          fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
+    <!-- 外套膜上部のカーブ -->
+    <path d="M-12,-45 C-8,-52 8,-52 12,-45" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
+
+    <!-- ハッチング: 外套膜の陰影（左側 — 密） -->
+    <path d="M-12,-40 C-11,-36 -10,-32 -9,-28" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-11,-42 C-10,-38 -9,-34 -8,-30" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-10,-44 C-9,-40 -8,-36 -7,-32" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-13,-38 C-12,-34 -11,-30 -10,-26" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-12,-36 C-11,-32 -10,-28 -9,-24" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-11,-34 C-10,-30 -9,-26 -8,-22" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-9,-46 C-8,-42 -7,-38 -6,-34" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-8,-47 C-7,-43 -6,-39 -5,-35" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+
+    <!-- ハッチング: 外套膜の陰影（右側 — やや疎） -->
+    <path d="M8,-44 C9,-40 10,-36 11,-32" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M9,-42 C10,-38 11,-34 12,-30" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M10,-40 C11,-36 12,-32 13,-28" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M7,-46 C8,-42 9,-38 10,-34" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M11,-38 C12,-34 13,-30 12,-26" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- クロスハッチング: 外套膜の暗部（左下） -->
+    <path d="M-8,-28 L-12,-34" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-7,-26 L-11,-32" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-6,-24 L-10,-30" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-9,-26 L-13,-32" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- ハッチング: 外套膜の頂部（丸み表現） -->
+    <path d="M-6,-48 C-4,-49 -2,-49.5 0,-49.5 C2,-49.5 4,-49 6,-48" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-8,-46 C-5,-48 -2,-48.5 0,-48.5 C2,-48.5 5,-48 8,-46" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-10,-44 C-6,-47 -3,-47.5 0,-47.5 C3,-47.5 6,-47 10,-44" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 目 === -->
+    <!-- 左目: 外枠 -->
+    <ellipse cx="-6" cy="-26" rx="3.5" ry="2.8" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
+    <!-- 左目: 瞳孔（横長 — タコの特徴的な瞳） -->
+    <ellipse cx="-6" cy="-26" rx="1.8" ry="1.2" fill="#1a1a1a"/>
+    <!-- 左目: ハイライト -->
+    <circle cx="-5.2" cy="-26.8" r="0.5" fill="#FFFFFF"/>
+    <!-- 左目: 周囲のシワ（ハッチング） -->
+    <path d="M-9.5,-26 C-10,-25 -10,-24 -9.5,-23" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-9,-27.5 C-10,-27 -10.5,-26 -10,-25" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- 右目: 外枠 -->
+    <ellipse cx="6" cy="-26" rx="3.5" ry="2.8" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
+    <!-- 右目: 瞳孔（横長） -->
+    <ellipse cx="6" cy="-26" rx="1.8" ry="1.2" fill="#1a1a1a"/>
+    <!-- 右目: ハイライト -->
+    <circle cx="6.8" cy="-26.8" r="0.5" fill="#FFFFFF"/>
+    <!-- 右目: 周囲のシワ -->
+    <path d="M9.5,-26 C10,-25 10,-24 9.5,-23" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M9,-27.5 C10,-27 10.5,-26 10,-25" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- 目の間の窪み -->
+    <path d="M-2.5,-24 C-1,-22 1,-22 2.5,-24" stroke="#1a1a1a" stroke-width="0.2" fill="none"/>
+
+    <!-- === 漏斗（サイフォン）=== -->
+    <path d="M-2,-12 C-1,-8 1,-8 2,-12" stroke="#1a1a1a" stroke-width="0.3" fill="none"/>
+    <path d="M-1.5,-11 L-1.5,-9" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M0,-11 L0,-8.5" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M1.5,-11 L1.5,-9" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕の付け根（頭部と腕の接続部） === -->
+    <path d="M-10,-10 C-12,-6 -12,-2 -10,2 C-6,6 6,6 10,2 C12,-2 12,-6 10,-10"
+          fill="none" stroke="#1a1a1a" stroke-width="0.35"/>
+    <!-- 付け根のハッチング -->
+    <path d="M-8,-6 C-7,-3 -6,0 -5,2" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-6,-8 C-5,-5 -4,-2 -3,0" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M6,-8 C5,-5 4,-2 3,0" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M8,-6 C7,-3 6,0 5,2" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕1: 左最外（北西方向） === -->
+    <path d="M-10,-4 C-18,-2 -30,4 -38,12 C-42,18 -44,26 -40,32 C-37,36 -32,34 -34,28 C-35,24 -30,18 -24,14"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <!-- 吸盤 -->
+    <ellipse cx="-20" cy="6" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-26" cy="10" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-31" cy="14" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-35" cy="20" rx="1.3" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-38" cy="26" rx="1.1" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="-20" cy="6" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-26" cy="10" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-31" cy="14" r="0.5" fill="#1a1a1a"/>
+    <circle cx="-35" cy="20" r="0.4" fill="#1a1a1a"/>
+    <!-- 腕1 ハッチング -->
+    <path d="M-16,0 L-18,4" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-22,6 L-24,10" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-28,12 L-30,16" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-34,18 L-36,22" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕2: 左上（西北西方向） === -->
+    <path d="M-9,0 C-16,6 -26,16 -32,26 C-35,32 -34,38 -28,40 C-24,41 -22,38 -24,34 C-26,30 -22,24 -16,18"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="-17" cy="12" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-22" cy="18" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-27" cy="24" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-30" cy="30" rx="1.3" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-30" cy="36" rx="1.0" ry="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="-17" cy="12" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-22" cy="18" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-27" cy="24" r="0.5" fill="#1a1a1a"/>
+    <circle cx="-30" cy="30" r="0.4" fill="#1a1a1a"/>
+    <path d="M-14,8 L-16,12" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-20,16 L-22,20" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-26,22 L-28,26" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕3: 左下（西方向） === -->
+    <path d="M-8,4 C-14,12 -20,24 -22,36 C-23,42 -20,46 -16,44 C-12,42 -12,36 -14,30 C-16,24 -12,18 -8,14"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="-12" cy="16" rx="1.1" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-16" cy="24" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-19" cy="32" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-20" cy="38" rx="1.2" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="-12" cy="16" r="0.3" fill="#1a1a1a"/>
+    <circle cx="-16" cy="24" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-19" cy="32" r="0.5" fill="#1a1a1a"/>
+    <circle cx="-20" cy="38" r="0.4" fill="#1a1a1a"/>
+    <path d="M-10,10 L-12,14" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-16,22 L-18,26" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕4: 左最下（南西方向） === -->
+    <path d="M-5,5 C-8,14 -10,28 -8,40 C-6,46 -2,48 0,44 C2,40 -2,34 -4,28 C-6,22 -4,16 -2,10"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="-4" cy="18" rx="1.0" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-6" cy="26" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-8" cy="34" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="-6" cy="42" rx="1.0" ry="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="-4" cy="18" r="0.3" fill="#1a1a1a"/>
+    <circle cx="-6" cy="26" r="0.4" fill="#1a1a1a"/>
+    <circle cx="-8" cy="34" r="0.4" fill="#1a1a1a"/>
+    <path d="M-4,14 L-6,18" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M-6,24 L-8,28" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕5: 右最下（南東方向） === -->
+    <path d="M5,5 C8,14 10,28 8,40 C6,46 2,48 0,44 C-2,40 2,34 4,28 C6,22 4,16 2,10"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="4" cy="18" rx="1.0" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="6" cy="26" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="8" cy="34" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="6" cy="42" rx="1.0" ry="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="4" cy="18" r="0.3" fill="#1a1a1a"/>
+    <circle cx="6" cy="26" r="0.4" fill="#1a1a1a"/>
+    <circle cx="8" cy="34" r="0.4" fill="#1a1a1a"/>
+    <path d="M4,14 L6,18" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M6,24 L8,28" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕6: 右下（東方向） === -->
+    <path d="M8,4 C14,12 20,24 22,36 C23,42 20,46 16,44 C12,42 12,36 14,30 C16,24 12,18 8,14"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="12" cy="16" rx="1.1" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="16" cy="24" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="19" cy="32" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="20" cy="38" rx="1.2" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="12" cy="16" r="0.3" fill="#1a1a1a"/>
+    <circle cx="16" cy="24" r="0.4" fill="#1a1a1a"/>
+    <circle cx="19" cy="32" r="0.5" fill="#1a1a1a"/>
+    <circle cx="20" cy="38" r="0.4" fill="#1a1a1a"/>
+    <path d="M10,10 L12,14" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M16,22 L18,26" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕7: 右上（東北東方向） === -->
+    <path d="M9,0 C16,6 26,16 32,26 C35,32 34,38 28,40 C24,41 22,38 24,34 C26,30 22,24 16,18"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="17" cy="12" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="22" cy="18" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="27" cy="24" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="30" cy="30" rx="1.3" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="30" cy="36" rx="1.0" ry="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="17" cy="12" r="0.4" fill="#1a1a1a"/>
+    <circle cx="22" cy="18" r="0.4" fill="#1a1a1a"/>
+    <circle cx="27" cy="24" r="0.5" fill="#1a1a1a"/>
+    <circle cx="30" cy="30" r="0.4" fill="#1a1a1a"/>
+    <path d="M14,8 L16,12" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M20,16 L22,20" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M26,22 L28,26" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕8: 右最外（北東方向） === -->
+    <path d="M10,-4 C18,-2 30,4 38,12 C42,18 44,26 40,32 C37,36 32,34 34,28 C35,24 30,18 24,14"
+          fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
+    <ellipse cx="20" cy="6" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="26" cy="10" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="31" cy="14" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="35" cy="20" rx="1.3" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <ellipse cx="38" cy="26" rx="1.1" ry="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
+    <circle cx="20" cy="6" r="0.4" fill="#1a1a1a"/>
+    <circle cx="26" cy="10" r="0.4" fill="#1a1a1a"/>
+    <circle cx="31" cy="14" r="0.5" fill="#1a1a1a"/>
+    <circle cx="35" cy="20" r="0.4" fill="#1a1a1a"/>
+    <path d="M16,0 L18,4" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M22,6 L24,10" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M28,12 L30,16" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+    <path d="M34,18 L36,22" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
+
+    <!-- === 腕の内側（膜の表現）=== -->
+    <path d="M-8,4 C-6,8 -4,10 0,8 C4,10 6,8 8,4" fill="none" stroke="#1a1a1a" stroke-width="0.2" stroke-dasharray="0.5,0.8"/>
+    <path d="M-10,0 C-8,6 -4,8 0,6 C4,8 8,6 10,0" fill="none" stroke="#1a1a1a" stroke-width="0.15" stroke-dasharray="0.4,0.6"/>
+
+    <!-- === 追加のハッチング: 腕の付け根周辺の影 === -->
+    <path d="M-6,2 L-4,6" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+    <path d="M-4,3 L-2,7" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+    <path d="M-2,4 L0,8" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+    <path d="M2,4 L4,8" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+    <path d="M4,3 L6,7" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+    <path d="M6,2 L8,6" stroke="#1a1a1a" stroke-width="0.1" fill="none"/>
+
+    <!-- === 外套膜と腕の間の質感線 === -->
+    <path d="M-10,-14 C-9,-12 -8,-10 -7,-8" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M-8,-16 C-7,-14 -6,-12 -5,-10" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M8,-16 C7,-14 6,-12 5,-10" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+    <path d="M10,-14 C9,-12 8,-10 7,-8" stroke="#1a1a1a" stroke-width="0.15" fill="none"/>
+
+    <!-- === 外套膜の模様（斑点風のドット）=== -->
+    <circle cx="-4" cy="-38" r="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="2" cy="-40" r="0.5" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="-8" cy="-34" r="0.7" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="6" cy="-36" r="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="0" cy="-44" r="0.5" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="-2" cy="-34" r="0.4" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="8" cy="-30" r="0.5" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="-6" cy="-42" r="0.4" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="4" cy="-32" r="0.6" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+    <circle cx="-10" cy="-28" r="0.5" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
+
   </g>
+
+  <!-- イラストエリア下部の細い区切り線 -->
+  <line x1="20" y1="207" x2="162" y2="207" stroke="#DDDDDD" stroke-width="0.3"/>
+
+  <!-- 著者名上部の装飾線 -->
+  <line x1="20" y1="228" x2="162" y2="228" stroke="#999999" stroke-width="0.3"/>
 
   <!-- 著者名（下部、左揃え） -->
   <text x="20" y="237" class="author-text">Kuu, Lemio, Sae</text>
 
-  <!-- 下部の細い装飾ライン -->
-  <rect x="20" y="243" width="142" height="0.3" fill="#CCCCCC"/>
+  <!-- 著者名下部の装飾線 -->
+  <line x1="20" y1="243" x2="162" y2="243" stroke="#999999" stroke-width="0.3"/>
 </svg>
