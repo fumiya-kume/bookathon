@@ -27,7 +27,7 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  AI Native ハッカソン徹底攻略
+  AIネイティブ時代のハッカソン戦略
 subtitle: |-
   3人のエンジニアが語る、AIと共創するものづくりの実践知
 
