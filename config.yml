@@ -155,7 +155,8 @@ toc: true
 # PDFMaker 固有の表紙設定は pdfmaker セクション内で上書き可能
 #coverimage: cover.jpg
 #coverimage: DHP-Metaverse.png
-coverimage: cover.svg
+#coverimage: cover.svg
+coverimage: cover.png
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はtrue (作成する)
 # titlepage: true
@@ -407,7 +408,8 @@ pdfmaker:
   # 仕上がりサイズ+塗り足し3mmありのPDFまたはIllustratorファイル（PDF互換オプション付き）を推奨。
   # 拡縮はされず「そのまま」貼り付けられる
   # coverimage: cover-a5.ai
-  coverimage: DHP-Metaverse.ai
+  #coverimage: DHP-Metaverse.ai
+  coverimage: cover.png
   #
   # TeXコンパイル前に実行するプログラム。変換後のTeXソースを調整したいときに使用する。
   # 渡される引数1=作業用展開ディレクトリ、引数2=呼び出しを実行したディレクトリ
