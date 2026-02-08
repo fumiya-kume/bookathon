@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif">
+  <rect width="800" height="460" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">INPUT - PROCESS - OUTPUT Model</text>
+  <line x1="220" y1="50" x2="580" y2="50" stroke="#ddd" stroke-width="1.5"/>
+
+  <!-- ===== INPUT Box ===== -->
+  <rect x="40" y="90" width="190" height="150" rx="12" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <rect x="40" y="90" width="190" height="38" rx="12" fill="#333"/>
+  <rect x="40" y="116" width="190" height="12" fill="#333"/>
+  <text x="135" y="116" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">INPUT</text>
+
+  <!-- Input icon: arrow pointing in -->
+  <g transform="translate(70, 110)">
+    <line x1="-10" y1="0" x2="6" y2="0" stroke="#fff" stroke-width="2"/>
+    <polygon points="6,-4 12,0 6,4" fill="#fff"/>
+  </g>
+
+  <!-- Input items -->
+  <g font-size="13" fill="#555">
+    <circle cx="65" cy="156" r="3" fill="#888"/>
+    <text x="78" y="160">User action</text>
+    <circle cx="65" cy="180" r="3" fill="#888"/>
+    <text x="78" y="184">Sensor data</text>
+    <circle cx="65" cy="204" r="3" fill="#888"/>
+    <text x="78" y="208">Voice / Text</text>
+  </g>
+
+  <!-- ===== Arrow 1 ===== -->
+  <g transform="translate(245, 165)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#333" stroke-width="2.5"/>
+    <polygon points="50,-7 64,0 50,7" fill="#333"/>
+  </g>
+
+  <!-- ===== PROCESS Box ===== -->
+  <rect x="310" y="90" width="190" height="150" rx="12" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <rect x="310" y="90" width="190" height="38" rx="12" fill="#333"/>
+  <rect x="310" y="116" width="190" height="12" fill="#333"/>
+  <text x="405" y="116" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">PROCESS</text>
+
+  <!-- Process icon: gears -->
+  <g transform="translate(340, 110)">
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="8" cy="4" r="3" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- Process items -->
+  <g font-size="13" fill="#555">
+    <circle cx="335" cy="156" r="3" fill="#888"/>
+    <text x="348" y="160">API calls</text>
+    <circle cx="335" cy="180" r="3" fill="#888"/>
+    <text x="348" y="184">AI inference</text>
+    <circle cx="335" cy="204" r="3" fill="#888"/>
+    <text x="348" y="208">Data transform</text>
+  </g>
+
+  <!-- ===== Arrow 2 ===== -->
+  <g transform="translate(515, 165)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#333" stroke-width="2.5"/>
+    <polygon points="50,-7 64,0 50,7" fill="#333"/>
+  </g>
+
+  <!-- ===== OUTPUT Box ===== -->
+  <rect x="580" y="90" width="190" height="150" rx="12" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <rect x="580" y="90" width="190" height="38" rx="12" fill="#333"/>
+  <rect x="580" y="116" width="190" height="12" fill="#333"/>
+  <text x="675" y="116" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">OUTPUT</text>
+
+  <!-- Output icon: arrow pointing out -->
+  <g transform="translate(610, 110)">
+    <line x1="-6" y1="0" x2="10" y2="0" stroke="#fff" stroke-width="2"/>
+    <polygon points="10,-4 16,0 10,4" fill="#fff"/>
+  </g>
+
+  <!-- Output items -->
+  <g font-size="13" fill="#555">
+    <circle cx="605" cy="156" r="3" fill="#888"/>
+    <text x="618" y="160">UI display</text>
+    <circle cx="605" cy="180" r="3" fill="#888"/>
+    <text x="618" y="184">Audio / Video</text>
+    <circle cx="605" cy="204" r="3" fill="#888"/>
+    <text x="618" y="208">Physical output</text>
+  </g>
+
+  <!-- ===== AI role bracket (above PROCESS) ===== -->
+  <path d="M320,75 L320,65 L490,65 L490,75" fill="none" stroke="#888" stroke-width="2"/>
+  <text x="405" y="58" text-anchor="middle" font-size="14" fill="#444" font-weight="bold">AI fills the gap</text>
+
+  <!-- ===== Human role bracket (below all) ===== -->
+  <path d="M40,260 L40,275 L770,275 L770,260" fill="none" stroke="#888" stroke-width="2"/>
+  <text x="405" y="298" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">Human defines I/O</text>
+  <text x="405" y="318" text-anchor="middle" font-size="12" fill="#888">"What goes in, what comes out"</text>
+
+  <!-- ===== Example box ===== -->
+  <rect x="100" y="350" width="600" height="72" rx="10" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <text x="400" y="375" text-anchor="middle" font-size="14" fill="#444" font-weight="bold">Example: Voice Changer</text>
+
+  <!-- Example flow -->
+  <g transform="translate(400, 400)">
+    <rect x="-260" y="-12" width="120" height="24" rx="5" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+    <text x="-200" y="4" text-anchor="middle" font-size="12" fill="#555">Mic input</text>
+
+    <line x1="-132" y1="0" x2="-100" y2="0" stroke="#888" stroke-width="1.5"/>
+    <polygon points="-100,-3 -94,0 -100,3" fill="#888"/>
+
+    <rect x="-90" y="-12" width="180" height="24" rx="5" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" font-size="12" fill="#555">Pitch shift API</text>
+
+    <line x1="96" y1="0" x2="128" y2="0" stroke="#888" stroke-width="1.5"/>
+    <polygon points="128,-3 134,0 128,3" fill="#888"/>
+
+    <rect x="140" y="-12" width="120" height="24" rx="5" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+    <text x="200" y="4" text-anchor="middle" font-size="12" fill="#555">Speaker output</text>
+  </g>
+</svg>
