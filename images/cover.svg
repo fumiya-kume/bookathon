@@ -6,9 +6,9 @@
       .label-text {
         font-family: 'Times New Roman', 'Noto Serif JP', Georgia, serif;
         font-style: italic;
-        font-size: 4.2mm;
+        font-size: 4.2;
         fill: #555555;
-        letter-spacing: 0.5mm;
+        letter-spacing: 0.5;
       }
       .title-main {
         font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
@@ -18,16 +18,15 @@
       .subtitle-text {
         font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
         font-weight: 400;
-        font-size: 4.6mm;
+        font-size: 4.6;
         fill: #333333;
       }
       .author-text {
         font-family: 'Noto Sans JP', 'Helvetica Neue', '游ゴシック', sans-serif;
         font-weight: 300;
-        font-size: 3.9mm;
+        font-size: 5;
         fill: #000000;
       }
-      /* placeholder classes removed — octopus illustration now rendered directly */
     </style>
   </defs>
 
@@ -38,6 +37,8 @@
   <rect x="3" y="3" width="176" height="251" fill="none" stroke="#000000" stroke-width="0.6"/>
   <rect x="5.5" y="5.5" width="171" height="246" fill="none" stroke="#000000" stroke-width="0.2"/>
 
+  <!-- ======== 上部20%: ラベル + 色帯 (y: 0-51) ======== -->
+
   <!-- ラベル: Hackathon & AI（上部、左揃え、イタリック） -->
   <text x="20" y="18" class="label-text">Hackathon &amp; AI</text>
 
@@ -45,38 +46,38 @@
   <line x1="20" y1="22" x2="162" y2="22" stroke="#999999" stroke-width="0.3"/>
 
   <!-- 色帯: ネオンブルー（上部、全幅、高さ12mm） -->
-  <!-- 色帯上部の細いアクセント線 -->
   <line x1="0" y1="25.5" x2="182" y2="25.5" stroke="#003399" stroke-width="0.4"/>
   <rect x="0" y="26" width="182" height="12" fill="#0066FF"/>
-  <!-- 色帯下部の細いアクセント線 -->
   <line x1="0" y1="38.5" x2="182" y2="38.5" stroke="#003399" stroke-width="0.4"/>
 
-  <!-- タイトル: AIネイティブ時代の（28pt相当 = 9.9mm） -->
-  <text x="20" y="55" class="title-main" font-size="9mm">AIネイティブ時代の</text>
+  <!-- ======== 20-40%: タイトル + サブタイトル (y: 51-103) ======== -->
 
-  <!-- タイトル: ハッカソン戦略（36pt相当 = 12.7mm、より大きく） -->
-  <text x="20" y="70" class="title-main" font-size="12mm">ハッカソン戦略</text>
+  <!-- タイトル: AIネイティブ時代の（9mm） -->
+  <text x="20" y="58" class="title-main" font-size="9">AIネイティブ時代の</text>
+
+  <!-- タイトル: ハッカソン戦略（12、より大きく） -->
+  <text x="20" y="74" class="title-main" font-size="12">ハッカソン戦略</text>
 
   <!-- タイトルとサブタイトルの区切り線 -->
-  <line x1="20" y1="74" x2="80" y2="74" stroke="#0066FF" stroke-width="0.5"/>
+  <line x1="20" y1="78" x2="80" y2="78" stroke="#0066FF" stroke-width="0.5"/>
 
   <!-- サブタイトル -->
-  <text x="20" y="83" class="subtitle-text">3人のエンジニアが語る、</text>
-  <text x="20" y="90" class="subtitle-text">AIと共創するものづくりの実践知</text>
+  <text x="20" y="88" class="subtitle-text">3人のエンジニアが語る、</text>
+  <text x="20" y="95" class="subtitle-text">AIと共創するものづくりの実践知</text>
+
+  <!-- ======== 40-80%: タコイラスト (y: 103-205) ======== -->
 
   <!-- イラストエリア上部の細い区切り線 -->
-  <line x1="20" y1="97" x2="162" y2="97" stroke="#DDDDDD" stroke-width="0.3"/>
+  <line x1="20" y1="103" x2="162" y2="103" stroke="#DDDDDD" stroke-width="0.3"/>
 
-  <!-- タコのイラスト — 木版画・銅版画風モノクロ線画（中央、約100mm×100mm） -->
-  <g transform="translate(91, 151)">
+  <!-- タコのイラスト — 木版画・銅版画風モノクロ線画 -->
+  <!-- 中心: (91, 154)、scale(0.6) で約60mm×60mm に縮小 -->
+  <g transform="translate(91, 154) scale(0.6)">
 
     <!-- === 外套膜（頭部）=== -->
-    <!-- メイン形状 -->
     <ellipse cx="0" cy="-30" rx="14" ry="19" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
-    <!-- 外套膜の輪郭（やや膨らみのある有機的な形） -->
     <path d="M-14,-30 C-15,-22 -13,-14 -10,-10 C-7,-7 7,-7 10,-10 C13,-14 15,-22 14,-30"
           fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
-    <!-- 外套膜上部のカーブ -->
     <path d="M-12,-45 C-8,-52 8,-52 12,-45" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
 
     <!-- ハッチング: 外套膜の陰影（左側 — 密） -->
@@ -108,23 +109,15 @@
     <path d="M-10,-44 C-6,-47 -3,-47.5 0,-47.5 C3,-47.5 6,-47 10,-44" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
 
     <!-- === 目 === -->
-    <!-- 左目: 外枠 -->
     <ellipse cx="-6" cy="-26" rx="3.5" ry="2.8" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
-    <!-- 左目: 瞳孔（横長 — タコの特徴的な瞳） -->
     <ellipse cx="-6" cy="-26" rx="1.8" ry="1.2" fill="#1a1a1a"/>
-    <!-- 左目: ハイライト -->
     <circle cx="-5.2" cy="-26.8" r="0.5" fill="#FFFFFF"/>
-    <!-- 左目: 周囲のシワ（ハッチング） -->
     <path d="M-9.5,-26 C-10,-25 -10,-24 -9.5,-23" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M-9,-27.5 C-10,-27 -10.5,-26 -10,-25" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
 
-    <!-- 右目: 外枠 -->
     <ellipse cx="6" cy="-26" rx="3.5" ry="2.8" fill="none" stroke="#1a1a1a" stroke-width="0.4"/>
-    <!-- 右目: 瞳孔（横長） -->
     <ellipse cx="6" cy="-26" rx="1.8" ry="1.2" fill="#1a1a1a"/>
-    <!-- 右目: ハイライト -->
     <circle cx="6.8" cy="-26.8" r="0.5" fill="#FFFFFF"/>
-    <!-- 右目: 周囲のシワ -->
     <path d="M9.5,-26 C10,-25 10,-24 9.5,-23" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M9,-27.5 C10,-27 10.5,-26 10,-25" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
 
@@ -137,10 +130,9 @@
     <path d="M0,-11 L0,-8.5" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M1.5,-11 L1.5,-9" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
 
-    <!-- === 腕の付け根（頭部と腕の接続部） === -->
+    <!-- === 腕の付け根 === -->
     <path d="M-10,-10 C-12,-6 -12,-2 -10,2 C-6,6 6,6 10,2 C12,-2 12,-6 10,-10"
           fill="none" stroke="#1a1a1a" stroke-width="0.35"/>
-    <!-- 付け根のハッチング -->
     <path d="M-8,-6 C-7,-3 -6,0 -5,2" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M-6,-8 C-5,-5 -4,-2 -3,0" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M6,-8 C5,-5 4,-2 3,0" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
@@ -149,7 +141,6 @@
     <!-- === 腕1: 左最外（北西方向） === -->
     <path d="M-10,-4 C-18,-2 -30,4 -38,12 C-42,18 -44,26 -40,32 C-37,36 -32,34 -34,28 C-35,24 -30,18 -24,14"
           fill="none" stroke="#1a1a1a" stroke-width="0.45" stroke-linecap="round"/>
-    <!-- 吸盤 -->
     <ellipse cx="-20" cy="6" rx="1.2" ry="0.8" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
     <ellipse cx="-26" cy="10" rx="1.3" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
     <ellipse cx="-31" cy="14" rx="1.4" ry="0.9" fill="none" stroke="#1a1a1a" stroke-width="0.2"/>
@@ -159,7 +150,6 @@
     <circle cx="-26" cy="10" r="0.4" fill="#1a1a1a"/>
     <circle cx="-31" cy="14" r="0.5" fill="#1a1a1a"/>
     <circle cx="-35" cy="20" r="0.4" fill="#1a1a1a"/>
-    <!-- 腕1 ハッチング -->
     <path d="M-16,0 L-18,4" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M-22,6 L-24,10" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
     <path d="M-28,12 L-30,16" stroke="#1a1a1a" stroke-width="0.12" fill="none"/>
@@ -299,6 +289,8 @@
     <circle cx="-10" cy="-28" r="0.5" fill="none" stroke="#1a1a1a" stroke-width="0.15"/>
 
   </g>
+
+  <!-- ======== 80-100%: 著者名 (y: 205-257) ======== -->
 
   <!-- イラストエリア下部の細い区切り線 -->
   <line x1="20" y1="207" x2="162" y2="207" stroke="#DDDDDD" stroke-width="0.3"/>
