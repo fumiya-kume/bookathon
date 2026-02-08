@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="182mm" height="257mm" viewBox="0 0 182 257">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&amp;family=Noto+Sans+JP:wght@300;400&amp;display=swap');
+
+      .label-text {
+        font-family: 'Times New Roman', 'Noto Serif JP', Georgia, serif;
+        font-style: italic;
+        font-size: 4.2mm;
+        fill: #555555;
+        letter-spacing: 0.5mm;
+      }
+      .desc-text {
+        font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+        font-weight: 400;
+        font-size: 3.8mm;
+        fill: #333333;
+        line-height: 1.8;
+      }
+      .barcode-label {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 3mm;
+        fill: #999999;
+        text-anchor: middle;
+      }
+      .author-text {
+        font-family: 'Noto Sans JP', 'Helvetica Neue', '游ゴシック', sans-serif;
+        font-weight: 300;
+        font-size: 3.9mm;
+        fill: #000000;
+      }
+    </style>
+  </defs>
+
+  <!-- 背景: 白 -->
+  <rect width="182" height="257" fill="#FFFFFF"/>
+
+  <!-- 色帯: ネオンブルー（上部、表紙と同じ位置） -->
+  <rect x="0" y="26" width="182" height="12" fill="#0066FF"/>
+
+  <!-- ラベル: Hackathon & AI（色帯の上） -->
+  <text x="20" y="18" class="label-text">Hackathon &amp; AI</text>
+
+  <!-- 書籍紹介文 -->
+  <text x="20" y="58" class="desc-text">ハッカソンに出たことはあるだろうか。</text>
+  <text x="20" y="66" class="desc-text">AI時代に突入した今、ハッカソンの景色は一変した。</text>
+  <text x="20" y="78" class="desc-text">3人のクリエイターが対話を通じて語る、</text>
+  <text x="20" y="86" class="desc-text">AIネイティブ時代のマインドセット、</text>
+  <text x="20" y="94" class="desc-text">アイデアの生み出し方、運営ノウハウ、</text>
+  <text x="20" y="102" class="desc-text">そして実践テクニック。</text>
+
+  <!-- 章構成（簡潔に） -->
+  <line x1="20" y1="115" x2="60" y2="115" stroke="#CCCCCC" stroke-width="0.3"/>
+  <text x="20" y="126" class="desc-text" font-size="3.2mm" fill="#666666">第1章　AIネイティブ時代のマインドセット</text>
+  <text x="20" y="134" class="desc-text" font-size="3.2mm" fill="#666666">第2章　アイデアと表現</text>
+  <text x="20" y="142" class="desc-text" font-size="3.2mm" fill="#666666">第3章　ハッカソン運営と参加の実践知</text>
+  <text x="20" y="150" class="desc-text" font-size="3.2mm" fill="#666666">第4章　AI活用の実践テクニック</text>
+  <line x1="20" y1="157" x2="60" y2="157" stroke="#CCCCCC" stroke-width="0.3"/>
+
+  <!-- バーコード用プレースホルダー枠（右下） -->
+  <rect x="117" y="197" width="45" height="30" fill="none" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="139.5" y="214" class="barcode-label">BARCODE</text>
+  <text x="139.5" y="220" class="barcode-label" font-size="2.2mm">45mm × 30mm</text>
+
+  <!-- 著者名（左下） -->
+  <text x="20" y="220" class="author-text">Kuu, Lemio, Sae</text>
+
+  <!-- 下部の装飾ライン -->
+  <rect x="20" y="235" width="142" height="0.3" fill="#CCCCCC"/>
+
+  <!-- フッター（発行情報プレースホルダー） -->
+  <text x="20" y="245" class="desc-text" font-size="2.8mm" fill="#999999">技術書典 / 2026</text>
+</svg>

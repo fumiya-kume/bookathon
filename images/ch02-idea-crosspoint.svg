@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif">
+  <rect width="800" height="500" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">Idea = Imagination x Technology</text>
+  <line x1="230" y1="50" x2="570" y2="50" stroke="#ddd" stroke-width="1.5"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Left Circle: Imagination ===== -->
+  <circle cx="280" cy="230" r="140" fill="#f5f5f5" stroke="#333" stroke-width="2.5" opacity="0.6"/>
+  <circle cx="280" cy="230" r="140" fill="none" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Imagination header -->
+  <text x="195" y="120" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Imagination</text>
+  <text x="195" y="140" text-anchor="middle" font-size="12" fill="#777">(What)</text>
+
+  <!-- Imagination icon: eye -->
+  <g transform="translate(195, 165)">
+    <ellipse cx="0" cy="0" rx="14" ry="9" fill="none" stroke="#666" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#666"/>
+  </g>
+
+  <!-- Imagination items -->
+  <g font-size="13" fill="#555">
+    <text x="195" y="200" text-anchor="middle">SF / Anime</text>
+    <text x="195" y="222" text-anchor="middle">Daily pain points</text>
+    <text x="195" y="244" text-anchor="middle">News / SNS</text>
+    <text x="195" y="266" text-anchor="middle">"Would be nice"</text>
+  </g>
+
+  <!-- ===== Right Circle: Technology ===== -->
+  <circle cx="520" cy="230" r="140" fill="#f0f0f0" stroke="#333" stroke-width="2.5" opacity="0.6"/>
+  <circle cx="520" cy="230" r="140" fill="none" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Technology header -->
+  <text x="605" y="120" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Technology</text>
+  <text x="605" y="140" text-anchor="middle" font-size="12" fill="#777">(How)</text>
+
+  <!-- Technology icon: gear -->
+  <g transform="translate(605, 165)">
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#666" stroke-width="1.5"/>
+    <line x1="0" y1="-10" x2="0" y2="-6" stroke="#666" stroke-width="2"/>
+    <line x1="0" y1="6" x2="0" y2="10" stroke="#666" stroke-width="2"/>
+    <line x1="-10" y1="0" x2="-6" y2="0" stroke="#666" stroke-width="2"/>
+    <line x1="6" y1="0" x2="10" y2="0" stroke="#666" stroke-width="2"/>
+    <line x1="-7" y1="-7" x2="-4" y2="-4" stroke="#666" stroke-width="2"/>
+    <line x1="4" y1="4" x2="7" y2="7" stroke="#666" stroke-width="2"/>
+    <line x1="7" y1="-7" x2="4" y2="-4" stroke="#666" stroke-width="2"/>
+    <line x1="-4" y1="4" x2="-7" y2="7" stroke="#666" stroke-width="2"/>
+  </g>
+
+  <!-- Technology items -->
+  <g font-size="13" fill="#555">
+    <text x="605" y="200" text-anchor="middle">New APIs</text>
+    <text x="605" y="222" text-anchor="middle">OSS / SDKs</text>
+    <text x="605" y="244" text-anchor="middle">AI Models</text>
+    <text x="605" y="266" text-anchor="middle">Hardware / IoT</text>
+  </g>
+
+  <!-- ===== Intersection highlight ===== -->
+  <!-- Star burst at center -->
+  <g transform="translate(400, 210)">
+    <polygon points="0,-18 5,-6 18,-6 8,2 12,14 0,8 -12,14 -8,2 -18,-6 -5,-6" fill="#333" opacity="0.15"/>
+  </g>
+  <text x="400" y="218" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Product</text>
+  <text x="400" y="240" text-anchor="middle" font-size="13" fill="#555">Crosspoint</text>
+  <text x="400" y="260" text-anchor="middle" font-size="12" fill="#888">"Feasible now"</text>
+
+  <!-- ===== Convergence arrows ===== -->
+  <path d="M220,310 Q310,340 370,300" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M580,310 Q490,340 430,300" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow labels -->
+  <text x="260" y="345" text-anchor="middle" font-size="12" fill="#777">Decompose the dream</text>
+  <text x="540" y="345" text-anchor="middle" font-size="12" fill="#777">Explore possibilities</text>
+
+  <!-- ===== Example box ===== -->
+  <rect x="130" y="400" width="540" height="65" rx="10" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <text x="400" y="422" text-anchor="middle" font-size="14" fill="#444" font-weight="bold">Example: Conan's Bowtie Voice Changer</text>
+  <text x="400" y="448" text-anchor="middle" font-size="12" fill="#777">Imagination: Conan gadget  x  Tech: Realtime voice API  =  Product</text>
+</svg>

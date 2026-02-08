@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif">
+  <rect width="800" height="480" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">AI = Lamp Genie</text>
+  <line x1="280" y1="50" x2="520" y2="50" stroke="#ddd" stroke-width="1.5"/>
+
+  <!-- ===== Human Side ===== -->
+  <g transform="translate(160, 200)">
+    <!-- Circle background -->
+    <circle cx="0" cy="0" r="90" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+
+    <!-- Person icon (larger, clearer) -->
+    <circle cx="0" cy="-32" r="18" fill="none" stroke="#333" stroke-width="2.5"/>
+    <line x1="0" y1="-14" x2="0" y2="22" stroke="#333" stroke-width="2.5"/>
+    <line x1="-20" y1="2" x2="20" y2="2" stroke="#333" stroke-width="2.5"/>
+    <line x1="0" y1="22" x2="-14" y2="48" stroke="#333" stroke-width="2.5"/>
+    <line x1="0" y1="22" x2="14" y2="48" stroke="#333" stroke-width="2.5"/>
+
+    <!-- Lightbulb above head -->
+    <circle cx="18" cy="-54" r="8" fill="none" stroke="#888" stroke-width="1.5"/>
+    <line x1="15" y1="-46" x2="21" y2="-46" stroke="#888" stroke-width="1.5"/>
+    <line x1="14" y1="-68" x2="14" y2="-64" stroke="#888" stroke-width="1"/>
+    <line x1="22" y1="-68" x2="22" y2="-64" stroke="#888" stroke-width="1"/>
+    <line x1="8" y1="-60" x2="10" y2="-58" stroke="#888" stroke-width="1"/>
+    <line x1="28" y1="-60" x2="26" y2="-58" stroke="#888" stroke-width="1"/>
+  </g>
+
+  <!-- Human labels -->
+  <text x="160" y="320" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Human</text>
+  <text x="160" y="344" text-anchor="middle" font-size="13" fill="#666">Idea / Why / UX</text>
+
+  <!-- Speech bubble from Human -->
+  <g transform="translate(160, 80)">
+    <rect x="-70" y="-22" width="140" height="44" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <polygon points="-8,22 8,22 0,34" fill="#fff" stroke="#333" stroke-width="2"/>
+    <line x1="-7" y1="22" x2="7" y2="22" stroke="#fff" stroke-width="3"/>
+    <text x="0" y="6" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">What to build?</text>
+  </g>
+
+  <!-- ===== Arrow (Wish) ===== -->
+  <g transform="translate(310, 200)">
+    <!-- Arrow shaft -->
+    <line x1="0" y1="0" x2="140" y2="0" stroke="#333" stroke-width="2.5" stroke-dasharray="8,5"/>
+    <polygon points="140,-8 156,0 140,8" fill="#333"/>
+    <!-- Label -->
+    <rect x="40" y="-28" width="60" height="24" rx="5" fill="#fff" stroke="#aaa" stroke-width="1"/>
+    <text x="70" y="-11" text-anchor="middle" font-size="14" fill="#555" font-weight="bold">Wish</text>
+  </g>
+
+  <!-- ===== AI Lamp Side ===== -->
+  <g transform="translate(560, 200)">
+    <!-- Circle background -->
+    <circle cx="0" cy="0" r="90" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+
+    <!-- Lamp body (larger, more detailed) -->
+    <ellipse cx="0" cy="38" rx="40" ry="12" fill="none" stroke="#333" stroke-width="2.5"/>
+    <path d="M-28,38 Q-32,14 -16,0 Q0,-14 16,0 Q32,14 28,38" fill="none" stroke="#333" stroke-width="2.5"/>
+    <!-- Lamp spout -->
+    <path d="M28,38 L42,30" stroke="#333" stroke-width="2.5"/>
+
+    <!-- Smoke / magic emanating -->
+    <path d="M0,-14 Q-12,-34 -4,-50 Q4,-66 -8,-78" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="5,4"/>
+    <path d="M6,-10 Q18,-30 10,-46 Q2,-62 14,-74" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="5,4"/>
+    <path d="M-6,-12 Q-20,-28 -14,-44" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+    <!-- Sparkles -->
+    <g fill="#999" font-size="16">
+      <text x="-22" y="-58">+</text>
+      <text x="20" y="-72">+</text>
+      <text x="28" y="-44">+</text>
+      <text x="-30" y="-76">+</text>
+    </g>
+  </g>
+
+  <!-- AI labels -->
+  <text x="560" y="320" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">AI (Lamp Genie)</text>
+  <text x="560" y="344" text-anchor="middle" font-size="13" fill="#666">How / Implementation</text>
+
+  <!-- Output box from AI -->
+  <g transform="translate(560, 380)">
+    <rect x="-75" y="-16" width="150" height="34" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" font-size="14" fill="#333">Code / Product</text>
+  </g>
+
+  <!-- ===== Key message at bottom ===== -->
+  <text x="400" y="450" text-anchor="middle" font-size="14" fill="#777">The quality of the "wish" determines the quality of the output</text>
+</svg>

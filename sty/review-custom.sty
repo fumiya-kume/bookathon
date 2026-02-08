@@ -1,1 +1,7 @@
 % for user-defined macro
+
+% 会話パート等の @<b>{} をゴシック体太字にする
+\DeclareRobustCommand{\reviewbold}[1]{\textbf{\textgt{#1}}}
+
+% 会話パートの発話テキストをゴシック体にする（@<em>{} を利用）
+\renewcommand{\reviewem}[1]{\textgt{#1}}
