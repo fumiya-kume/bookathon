@@ -328,7 +328,7 @@ texstyle: ["reviewmacro"]
 # LaTeX用のdocumentclassを指定する
 # オプションについてはsty/README.mdを参照
 # デフォルトは印刷用。電子配布版を作るには media=ebook とする
-texdocumentclass: ["review-jsbook", "media=print,paper=a5"]
+texdocumentclass: ["review-jsbook", "media=print,paper=a5,line_length=36zw,number_of_lines=34,head_space=15mm,baselineskip=15pt"]
 # texdocumentclass: ["review-jsbook", "media=ebook"]
 #
 # LaTeX用のコマンドを指定する
