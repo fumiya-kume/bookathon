@@ -1,0 +1,21 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "EjLBu",
+      "x": 2585,
+      "y": 3692,
+      "name": "P9 tmux分割",
+      "clip": true,
+      "width": 2122,
+      "height": 2976,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "./exports/9TKSK.png",
+        "mode": "fill"
+      }
+    }
+  ]
+}

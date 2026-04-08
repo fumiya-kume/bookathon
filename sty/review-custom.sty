@@ -1,1 +1,52 @@
 % for user-defined macro
+
+% 会話パート等の @<b>{} をゴシック体太字にする
+\DeclareRobustCommand{\reviewbold}[1]{\textbf{\textgt{#1}}}
+
+% 会話パートの発話テキストをゴシック体にする（@<em>{} を利用）
+\renewcommand{\reviewem}[1]{\textgt{#1}}
+
+\makeatletter
+
+% review-jsbook は 9.5pt を 10pt に丸めるため、本文だけ実サイズを上書きする
+\renewcommand{\normalsize}{%
+  \jsc@setfontsize\normalsize{9.5pt}{15pt}%
+  \abovedisplayskip 11\jsc@mpt \@plus3\jsc@mpt \@minus4\jsc@mpt
+  \abovedisplayshortskip \z@ \@plus3\jsc@mpt
+  \belowdisplayskip 9\jsc@mpt \@plus3\jsc@mpt \@minus4\jsc@mpt
+  \belowdisplayshortskip \belowdisplayskip
+  \let\@listi\@listI}
+\normalsize
+
+% 章扉の上余白と後ろの空きを少し詰める
+\def\@makechapterhead#1{%
+  \vspace*{1\Cvs}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge\headfont \@chapapp\thechapter\@chappos
+        \par\nobreak
+        \vskip .75\Cvs
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \headfont #1\par\nobreak
+    \vskip 2\Cvs}}
+
+\def\@makeschapterhead#1{%
+  \vspace*{1\Cvs}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \headfont #1\par\nobreak
+    \vskip 2\Cvs}}
+
+% cover_fit_page=true の設定をpdfmaker.rbの上書きから復元する
+% (pdfmaker.rbが \review@coverimageoption を keepaspectratio で上書きするため)
+\ifrecls@coverfitpage
+  \AtBeginDocument{%
+    \def\review@coverimageoption{width=\paperwidth,height=\paperheight}%
+  }
+\fi
+
+\makeatother
