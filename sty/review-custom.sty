@@ -41,4 +41,12 @@
     \Huge \headfont #1\par\nobreak
     \vskip 2\Cvs}}
 
+% cover_fit_page=true の設定をpdfmaker.rbの上書きから復元する
+% (pdfmaker.rbが \review@coverimageoption を keepaspectratio で上書きするため)
+\ifrecls@coverfitpage
+  \AtBeginDocument{%
+    \def\review@coverimageoption{width=\paperwidth,height=\paperheight}%
+  }
+\fi
+
 \makeatother
