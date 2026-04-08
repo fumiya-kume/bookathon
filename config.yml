@@ -104,7 +104,7 @@ toc: true
 #coverimage: cover.jpg
 #coverimage: DHP-Metaverse.png
 #coverimage: cover.svg
-coverimage: cover.png
+coverimage: hyoushi_350dpi.png
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はtrue (作成する)
 # titlepage: true
@@ -125,7 +125,7 @@ coverimage: cover.png
 # colophon_order: ["aut", "csl", "trl", "dsr", "ill", "cov", "edt", "pbl", "contact", "prt"]
 
 # 裏表紙データファイル (PDFMaker向けにはLaTeXソース断片、EPUBMaker向けにはHTMLファイル)
-# backcover: null
+backcover: backcover.tex
 
 # プロフィールページファイル  (PDFMaker向けにはLaTeXソース断片、EPUBMaker向けにはHTMLファイル)。ファイル名を指定すると著者紹介として入る
 # profile: null
@@ -328,8 +328,8 @@ texstyle: ["reviewmacro"]
 # LaTeX用のdocumentclassを指定する
 # オプションについてはsty/README.mdを参照
 # デフォルトは印刷用。電子配布版を作るには media=ebook とする
-texdocumentclass: ["review-jsbook", "media=print,paper=a5,line_length=36zw,number_of_lines=34,head_space=15mm,gutter=18mm,baselineskip=15pt"]
-# texdocumentclass: ["review-jsbook", "media=ebook"]
+# texdocumentclass: ["review-jsbook", "media=print,paper=a5,line_length=36zw,number_of_lines=34,head_space=15mm,gutter=18mm,baselineskip=15pt"]
+texdocumentclass: ["review-jsbook", "media=ebook,paper=letter,cover_fit_page=true,line_length=40zw,number_of_lines=38,head_space=20mm,gutter=20mm,baselineskip=16pt"]
 #
 # LaTeX用のコマンドを指定する
 # texcommand: "uplatex"
@@ -357,7 +357,7 @@ pdfmaker:
   # 拡縮はされず「そのまま」貼り付けられる
   # coverimage: cover-a5.ai
   #coverimage: DHP-Metaverse.ai
-  coverimage: cover.png
+  coverimage: hyoushi_350dpi.png
   #
   # TeXコンパイル前に実行するプログラム。変換後のTeXソースを調整したいときに使用する。
   # 渡される引数1=作業用展開ディレクトリ、引数2=呼び出しを実行したディレクトリ
